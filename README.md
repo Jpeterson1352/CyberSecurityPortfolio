@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Images/AzureDiagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [Filebeat YAML](Roles/filebeat-playbook.yml) file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [Filebeat YAML](Ansible/filebeat-playbook.yml) file may be used to install only certain pieces of it, such as Filebeat.
 
 This document contains the following details:
 - Description of the Topologu
@@ -89,7 +89,7 @@ These Beats allow us to collect the following information from each machine:<br 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [ELK YAML Playbook](Roles/elk_setup.yml) file to your Roles folder.
+- Copy the [ELK YAML Playbook](Ansible/elk_setup.yml) file to your Roles folder.
 - Update the YAML Playbook file to include your target host/s that you want to install ELK on.
 - Run the playbook, and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected.
 
